@@ -1,6 +1,6 @@
 <?php
 
-$device = '/dev/cu.usbmodem142201';
+$device = '/dev/ttyACM0';
 
 #$command = "mode $device: BAUD=9600 PARITY=N data=8 stop=1 XON=off TO=on";
 #system($command, $retVar);
@@ -35,5 +35,9 @@ exit;
 function displayValues($row)
 {
   $data = explode(",", $row);
-  
+  $type = $data[0];
+
+  foreach($data as $value) {
+      echo empty($value) ? 'x ' : $value . " ";
+  }
 }
