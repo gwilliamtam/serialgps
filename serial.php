@@ -1,6 +1,7 @@
 <?php
 
 $device = '/dev/ttyACM0';
+#something 
 
 #$command = "mode $device: BAUD=9600 PARITY=N data=8 stop=1 XON=off TO=on";
 #system($command, $retVar);
